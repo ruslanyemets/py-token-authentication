@@ -105,12 +105,7 @@ class MovieViewSet(
 
 
 class MovieSessionViewSet(
-    viewsets.GenericViewSet,
-    mixins.ListModelMixin,
-    mixins.CreateModelMixin,
-    mixins.RetrieveModelMixin,
-    mixins.UpdateModelMixin,
-    mixins.DestroyModelMixin
+    viewsets.ModelViewSet
 ):
     queryset = (
         MovieSession.objects.all()
